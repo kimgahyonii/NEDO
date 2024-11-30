@@ -1,15 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/mypage.css">
-    <title>mypage</title>
+    <link rel="stylesheet" href="/css/nav2.css">
+    <title>NEDO - 마이페이지</title>
 </head>
 
 <body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">NEDO</a>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="saja.html">SaJa</a></li>
+            <li><a href="gonggu.html">gonggu</a></li>
+            <li><a href="mypage.html">mypage</a></li>
+        </ul>
+    </nav>
+
+    <!-- 마이페이지 컨텐츠 -->
+    <main class="mypage-content">
+        <h1>마이페이지</h1>
+
+        <!-- 내가 참여한 공구 -->
+        <section>
+            <h2>내가 참여한 공구</h2>
+            <div class="gonggu-list">
+                <div class="gonggu-item">
+                    <a href="gonggu.html">
+                        <img src="image/image1.png" alt="복숭아 이미지">
+                    </a>
+                </div>
+                <div class="gonggu-item">
+                    <a href="gonggu.html">
+                        <img src="image/image3.png" alt="틴트 이미지">
+                    </a>
+                </div>
+                <div class="gonggu-item">
+                    <a href="gonggu.html">
+                        <img src="image/image7.png" alt="후드티 이미지">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 내가 등록한 공구 -->
+        <section>
+            <h2>내가 등록한 공구</h2>
+            <div class="gonggu-list">
+                <div class="gonggu-item">
+                    <a href="gonggu.html">
+                        <img src="/image/image4.png" alt="틴트 이미지">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script src="/js/mypage.js"></script>
+    <script src="/js/navscript.js"></script>
 </body>
 
 </html>

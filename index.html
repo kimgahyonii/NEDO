@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar">
         <a href="index.html" class="logo">NEDO</a>
         <div class="hamburger" id="hamburger">
@@ -30,6 +30,15 @@
         <div id="text">너DO-NADO<br>DA함께 살 수 있는<br>GONgGU WEB-SITE</div>
         <div id="youandi-text">YOUANDI</div>
     </div>
+    <script>
+
+        window.onload = function () {
+            // 4초 후 main.html로 자동 이동
+            setTimeout(function () {
+                window.location.href = "main.html";  // 4초 뒤 main.html로 이동
+            }, 4000);  // 4000ms = 4초
+        };
+    </script>
 
     <script src="/js/navscript.js"></script>
 </body>

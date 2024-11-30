@@ -107,15 +107,6 @@ h1 {
     transform: rotate(-20deg);
 }
 
-@media screen and (max-width: 500px) {
-    #applemusic_white {
-        margin-top: 20px;
-        bottom: 0%;
-        left: -150px;
-        z-index: 1;
-        transform: rotate(-20deg);
-    }
-}
 
 
 #applemusic_small_img {
@@ -176,6 +167,8 @@ h1 {
 
 }
 
+
+
 #next {
     padding: 10px;
     width: 150px;
@@ -211,6 +204,13 @@ h1 {
 /* } */
 @media screen and (max-width: 500px) {
 
+    #next {
+        /* z-index: 2000 !important; */
+        height: 60px;
+        /* margin-top: 10%; */
+        margin-bottom: 400%;
+        box-shadow: 0 10px 15px rgba(255, 255, 255, 0.7);
+    }
 
     #main_title {
         margin-top: 10%;
@@ -225,20 +225,35 @@ h1 {
     }
 
     #applemusic_full_img {
-        position: fixed;
+        /* position: fixed; */
         margin-left: 100px;
-        margin-top: 60px;
+        margin-top: 10px;
         justify-content: center;
         align-items: center;
         z-index: 3;
     }
 
-    #next {
-        height: 60px;
-        margin-top: 150%;
-        margin-bottom: 20%;
-        box-shadow: 0 10px 15px rgba(255, 255, 255, 0.7);
+
+
+    #applemusic_white {
+        position: fixed;
+        transform: rotate(0deg);
+        width: 340px;
     }
+
+    #applemusic_small_img {
+        position: fixed;
+        transform: rotate(0deg);
+        width: 300px;
+    }
+
+    #applemusic_white:hover,
+    #applemusic_small_img:hover {
+        width: 350px;
+        transform: rotate(0deg);
+        z-index: 5;
+    }
+
 
 }
 
@@ -270,6 +285,7 @@ h1 {
     padding-left: 7%;
     padding-right: 7%;
     top: 0;
+    overflow: auto;
     /*박스 내부는 클릭해도 안닫힘*/
     cursor: default;
 
@@ -478,6 +494,7 @@ h1 {
 }
 
 #custom_card_img {
+    z-index: 2000;
     margin-top: 2%;
     height: 480px;
     width: 300px;
