@@ -79,11 +79,14 @@ h1 {
     margin-bottom: 2%;
 }
 
+/* frame 관련 */
+
 .frame_select {
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    transform: none !important;
 }
 
 .frame_select>div {
@@ -96,13 +99,13 @@ h1 {
 #applemusic_small_img {
     /* max-width: 100%; */
     transition: all 0.5s ease-in-out;
-    position: relative;
+    position: absolute;
     /* height: auto; */
 }
 
 #applemusic_white {
-    bottom: -1%;
-    left: 28%;
+    top: 450px;
+    left: 350px;
     z-index: 1;
     transform: rotate(-20deg);
 }
@@ -110,8 +113,8 @@ h1 {
 
 
 #applemusic_small_img {
-    bottom: 1%;
-    right: 28%;
+    top: 450px;
+    right: 350px;
     z-index: 1;
     transform: rotate(20deg);
     /* 15도 회전 */
@@ -137,7 +140,8 @@ h1 {
 #applemusic_white:hover {
     width: 310px;
     transform: rotate(0deg);
-    z-index: 3;
+
+    z-index: 100;
 }
 
 #applemusic_white:hover,
@@ -149,7 +153,182 @@ h1 {
 
 #applemusic_small_img:hover~#applemusic_full_img,
 #applemusic_small_img:hover~#applemusic_width {
-    z-index: 1;
+    z-index: 3;
+}
+
+
+@media screen and (min-width: 1399px) {
+    .frame_select {}
+
+    #applemusic_white {
+        /* position: relative; */
+        left: 350px;
+    }
+
+    #applemusic_small_img {
+        /* position: relative; */
+        right: 350px;
+    }
+}
+
+
+@media screen and (max-width: 1195px) {
+    .frame_select {
+        width: 85%;
+    }
+
+    #applemusic_white {
+        /* position: fixed; */
+        /* 반드시 position 설정 필요 */
+        left: 50px;
+        bottom: 500px !important;
+        transform: rotate(-20deg);
+        transition: all 0.3s ease;
+
+        /* 부드러운 이동 효과 */
+    }
+
+
+    #applemusic_full_img {
+        left: 70px;
+    }
+
+    #applemusic_small_img {
+        /* position: relative; */
+        /* 반드시 position 설정 필요 */
+        left: 500px;
+        bottom: 500px;
+        transform: rotate(20deg);
+        transition: all 0.3s ease;
+    }
+}
+
+
+@media (min-width: 1072px) and (max-width: 1178px) {
+    .frame_select {
+        width: 85%;
+    }
+
+    #applemusic_white {
+        /* position: fixed; */
+        /* 반드시 position 설정 필요 */
+        left: 200px;
+        bottom: 500px !important;
+        transform: rotate(-20deg);
+        transition: all 0.3s ease;
+
+        /* 부드러운 이동 효과 */
+    }
+
+
+    #applemusic_full_img {
+        left: 70px;
+    }
+
+    #applemusic_small_img {
+        position: fixed !important;
+        /* 반드시 position 설정 필요 */
+        left: 550px;
+        bottom: 500px;
+        transform: rotate(20deg);
+        transition: all 0.3s ease;
+    }
+}
+
+
+@media (max-width: 900px) {
+    #applemusic_small_img {
+        left: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #applemusic_white {
+        margin-left: 20px;
+    }
+}
+
+
+@media screen and (min-width: 1240px) {
+
+    #applemusic_white {
+        position: fixed !important;
+        left: 350px;
+        bottom: 20px;
+    }
+
+    #applemusic_small_img {
+        position: fixed !important;
+        right: 350px;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    #main_title {
+        margin-top: 10%;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #sub_title {
+        margin-left: 20% 3% 0 3%;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    #applemusic_full_img {
+        /* position: fixed; */
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        width: 300px;
+
+    }
+
+    #applemusic_white {
+        justify-content: center;
+        transform: rotate(0deg);
+        align-items: center;
+        display: flex;
+    }
+
+    #applemusic_small_img {
+        justify-content: center;
+        transform: rotate(0deg);
+        align-items: center;
+        display: flex;
+
+    }
+
+    /* #applemusic_white {
+        transform: rotate(0deg);
+        bottom: 100px;
+    } */
+
+    /* .frame_select {
+        position: relative;
+    } */
+
+    /* #applemusic_small_img {
+        position: absolute;
+        transform: rotate(0deg);
+        width: 300px;
+
+        margin-right: 10px !important;
+    } */
+
+    #applemusic_white:hover,
+    #applemusic_small_img:hover {
+        width: 350px;
+        transform: rotate(0deg);
+        z-index: 5;
+    }
+
+
 }
 
 #modal {
@@ -181,8 +360,8 @@ h1 {
     font-size: 25px;
     cursor: pointer;
     z-index: 1500;
-    margin-top: 37%;
-    margin-left: 5%;
+    margin-top: 550px;
+    margin-left: 100px;
 }
 
 #next:hover {
@@ -190,6 +369,29 @@ h1 {
     color: black;
 
 
+}
+
+@media screen and (max-width: 1400px) {
+    #next {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    #text_color {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #next {
+        /* z-index: 2000 !important; */
+        height: 60px;
+        /* margin-top: 10%; */
+        margin-bottom: 400%;
+        box-shadow: 0 10px 15px rgba(255, 255, 255, 0.7);
+    }
 }
 
 /* 화면 너비가 768px 이하일 때 */
@@ -202,60 +404,9 @@ h1 {
  */
 
 /* } */
-@media screen and (max-width: 500px) {
-
-    #next {
-        /* z-index: 2000 !important; */
-        height: 60px;
-        /* margin-top: 10%; */
-        margin-bottom: 400%;
-        box-shadow: 0 10px 15px rgba(255, 255, 255, 0.7);
-    }
-
-    #main_title {
-        margin-top: 10%;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    #sub_title {
-        margin-left: 20% 3% 0 3%;
-        text-align: center;
-        font-size: 13px;
-    }
-
-    #applemusic_full_img {
-        /* position: fixed; */
-        margin-left: 100px;
-        margin-top: 10px;
-        justify-content: center;
-        align-items: center;
-        z-index: 3;
-    }
 
 
 
-    #applemusic_white {
-        position: fixed;
-        transform: rotate(0deg);
-        width: 340px;
-    }
-
-    #applemusic_small_img {
-        position: fixed;
-        transform: rotate(0deg);
-        width: 300px;
-    }
-
-    #applemusic_white:hover,
-    #applemusic_small_img:hover {
-        width: 350px;
-        transform: rotate(0deg);
-        z-index: 5;
-    }
-
-
-}
 
 .modal_content {
 
@@ -285,7 +436,7 @@ h1 {
     padding-left: 7%;
     padding-right: 7%;
     top: 0;
-    overflow: auto;
+
     /*박스 내부는 클릭해도 안닫힘*/
     cursor: default;
 
@@ -294,17 +445,15 @@ h1 {
 @media screen and (max-width: 500px) {
 
 
-
     .modal_content {
         display: grid;
-        margin-top: 100%;
+        margin-top: 500px;
         position: absolute;
         transform: translate(0, -10%);
         z-index: 1003;
         width: 100%;
+        overflow: auto;
     }
-
-
 
 
 }
@@ -706,15 +855,9 @@ input {
         flex-direction: column;
     }
 
-    .category {
-        /* grid-column: 1/ span 2;
-        left: 50%; */
-        /* 'category'가 'modal_content'의 상단에 위치하도록 설정 */
-
-    }
-
     .calendar {
-        margin-bottom: 700px;
+        margin-bottom: 300px;
+        height: 30px;
     }
 }
 
@@ -872,21 +1015,39 @@ input {
 .calendar {
     margin-right: 20%;
     border-radius: 30px;
-    height: 100%;
-    width: 100%;
+    height: 140px;
+    width: 250px;
     background-color: #1F1F1F;
     color: #ffff;
 
 }
 
 @media screen and (max-width: 500px) {
-    .category {}
+
+
+    .calendar {
+        margin-left: 40px;
+    }
+
+
 }
 
 #calendar_text {
     margin-top: 9%;
     font-family: 'Pretendard-SemiBold';
     font-size: 19px;
+}
+
+@media screen and (max-width: 500px) {
+
+
+    #calendar_text {
+
+        font-size: 17px;
+    }
+
+
+
 }
 
 #start_calendar {
@@ -953,6 +1114,7 @@ input {
 
 
 
+
 }
 
 .category {
@@ -1004,4 +1166,14 @@ input {
     grid-row: 3;
     padding: 8%;
     padding-left: 10%;
+}
+
+@media (max-width: 500px) {
+
+    .tip_public>button,
+    .tip_private>button {
+        width: 120px;
+        height: 50px;
+        margin-left: 12px;
+    }
 }

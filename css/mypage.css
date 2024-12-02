@@ -1,3 +1,103 @@
+/* body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Unbounded', sans-serif;
+    background-color: #000;
+ 
+    color: #fff;
+ 
+}
+
+.mypage-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: left;
+    text-align: left;
+
+}
+
+h2 {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: left;
+
+    text-align: left;
+
+
+}
+
+.gonggu-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 40px;
+    justify-content: flex-start;
+    
+    align-items: flex-start;
+    
+    flex-wrap: wrap;
+    
+    gap: 40px;
+    justify-content: flex-start;
+    
+    align-items: flex-start;
+    
+
+}
+
+.gonggu-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    max-width: 200px;
+
+}
+
+.gonggu-item:hover {
+    transform: translateY(-5px);
+
+}
+
+.gonggu-item img {
+    width: 100%;
+
+    max-width: 200px;
+
+}
+
+.gonggu-item:hover {
+    transform: translateY(-5px);
+}
+
+.gonggu-item img {
+    width: 100%;
+    display: block;
+}
+
+.gonggu-item a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+} */
+
 body,
 html {
     margin: 0;
@@ -66,12 +166,4 @@ h2 {
     text-decoration: none;
     text-align: center;
     color: #fff;
-}
-
-h1 {
-    text-align: left;
-}
-
-h2 {
-    text-align: left;
 }
