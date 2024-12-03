@@ -226,7 +226,7 @@ h1 {
     }
 
     #applemusic_small_img {
-        position: fixed !important;
+        /* position: fixed !important; */
         /* 반드시 position 설정 필요 */
         left: 550px;
         bottom: 500px;
@@ -279,8 +279,51 @@ h1 {
         font-size: 13px;
     }
 
-    #applemusic_full_img {
-        /* position: fixed; */
+    /* .frame_select {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    } */
+
+    .frame_select {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+    }
+
+    #applemusic_full_img,
+    #applemusic_white,
+    #applemusic_small_img {
+        width: 300px;
+        height: auto;
+        transform: rotate(0deg);
+        position: static;
+    }
+
+    .frame_select img {
+        width: 200px;
+        height: auto;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .frame_select img.center {
+        width: 300px;
+        transform: scale(1.2);
+    }
+
+    .frame_select img:not(.center) {
+        opacity: 0.7;
+        transform: scale(0.9);
+    }
+
+
+    /* #applemusic_full_img {
         margin-top: 10px;
         justify-content: center;
         align-items: center;
@@ -289,11 +332,21 @@ h1 {
 
     }
 
-    #applemusic_white {
+    #applemusic_white,
+    #applemusic_small_img {
+        margin-bottom: 100px;
+        width: 300px;
+
+        height: auto;
+        position: absolute;
+        bottom: 20px;
+        transform: rotate(0deg);
+    } */
+
+    /* #applemusic_white {
         justify-content: center;
         transform: rotate(0deg);
-        align-items: center;
-        display: flex;
+        bottom: 200px;
     }
 
     #applemusic_small_img {
@@ -302,7 +355,7 @@ h1 {
         align-items: center;
         display: flex;
 
-    }
+    } */
 
     /* #applemusic_white {
         transform: rotate(0deg);
@@ -332,6 +385,7 @@ h1 {
 }
 
 #modal {
+    overflow: scroll;
     position: fixed;
     top: 0;
     left: 0;
@@ -391,6 +445,11 @@ h1 {
         /* margin-top: 10%; */
         margin-bottom: 400%;
         box-shadow: 0 10px 15px rgba(255, 255, 255, 0.7);
+    }
+
+    #custom_card_img {
+        width: 150px;
+        height: auto;
     }
 }
 
@@ -526,6 +585,14 @@ h1 {
     color: #007bff;
 }
 
+@media screen and (max-width: 1260px) {
+    #image_upload_text {
+        top: 20px;
+        left: 10px;
+        position: fixed;
+    }
+}
+
 #custom_card_img {
     width: 100%;
     max-width: 300px;
@@ -534,11 +601,43 @@ h1 {
 
 @media screen and (max-width: 500px) {
 
+    body {
+        width: 100%;
+        height: 100vh;
+        /* overflow: scroll !important; */
+    }
+
     .custom_card {
 
         left: 100%;
-        max-width: 300px;
     }
+
+    .modal_content {
+        overflow: visible;
+    }
+
+
+    #next {
+        position: fixed;
+        z-index: 3 500;
+        width: 100px;
+        margin: 0;
+        /* 버튼 위치 바꾸기 */
+        top: calc(50% + 100px);
+        left: calc(50% - 230px);
+    }
+}
+
+@media screen and (max-width: 1250px) {
+
+    .modal_content {
+        width: auto;
+    }
+
+    #custom_card_img {
+        right: 30px;
+    }
+
 }
 
 /* White Frame */
@@ -583,6 +682,11 @@ h1 {
 .small-frame #hashtag_input {
     margin-top: 20px;
     /* 이미지 아래로 텍스트 이동 */
+}
+
+#item_ment {
+    margin-top: 150px !important;
+    ;
 }
 
 #item_name {
@@ -806,7 +910,7 @@ input {
     .text_color {
         display: flex;
         gap: 10px;
-        height: 100px;
+        height: 120px;
         width: 450px;
 
         background-color: rgba(255, 255, 255, 0.78);
@@ -814,12 +918,23 @@ input {
         grid-row: 1;
         /* 그리드에서 차지하는 행 */
         border-radius: 30px;
-
-        margin-top: 30px;
         justify-content: center;
         align-items: center;
         margin-left: 40px;
 
+    }
+
+    .custom_card {
+        margin-bottom: 250px;
+    }
+
+    #modal_title {
+        margin-top: 10px;
+    }
+
+    .modal_content {
+
+        margin-top: 600px;
     }
 
     .colors {
@@ -1030,12 +1145,13 @@ input {
     }
 
 
+
 }
 
 #calendar_text {
     margin-top: 9%;
     font-family: 'Pretendard-SemiBold';
-    font-size: 19px;
+    font-size: 17px;
 }
 
 @media screen and (max-width: 500px) {
@@ -1111,9 +1227,6 @@ input {
     .category {
         margin-left: 40px;
     }
-
-
-
 
 }
 

@@ -246,7 +246,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    
 
 
+
+});
+
+// 이미지를 감싼 컨테이너와 이미지 선택
+const frameSelect = document.querySelector(".frame_select");
+const images = document.querySelectorAll(".frame_select img");
+
+// 이벤트 리스너 추가
+images.forEach((img) => {
+    img.addEventListener("mouseover", () => {
+        // 모든 이미지 초기화
+        images.forEach((image) => image.classList.remove("center"));
+
+        // 마우스를 가져다 댄 이미지에 'center' 클래스 추가
+        img.classList.add("center");
+
+        // 정렬 조정: 마우스를 가져다 댄 이미지를 가운데로 이동
+        const index = Array.from(images).indexOf(img);
+
+        // 이미지를 정렬하기 위해 순서를 조정
+        frameSelect.style.justifyContent = index === 0
+            ? "flex-start"
+            : index === images.length - 1
+                ? "flex-end"
+                : "center";
+    });
 });
